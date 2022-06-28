@@ -1,0 +1,41 @@
+.specifics {
+    padding-top: 94px;
+    .specifics__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.specifics__item {
+    width: 270px;
+}
+
+.svg-wrap {
+    height: 120px;
+    @include flex;
+    justify-content: center;
+
+    background: #f5f4fa;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.specifics__svg {
+    width: 70px;
+    height: 70px;
+}
+
+.specifics__title {
+    @include font(700, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+    color: var(--mine-color-text);
+    margin-bottom: 10px;
+}
+
+.specifics__text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--second-color-text);
+}

@@ -1,0 +1,123 @@
+.modal__title {
+    @include font(700, 20px, 1.15, 0.03em);
+    text-align: center;
+
+    color: var(--mine-title-color);
+    margin-bottom: 12px;
+}
+
+.modal__field {
+    margin-bottom: 10px;
+}
+
+.input__wrap {
+    position: relative;
+}
+
+.modal__label {
+    font-size: 12px;
+    line-height: 1.16;
+
+    letter-spacing: 0.01em;
+
+    color: var(--second-color-text);
+
+    margin-bottom: 4px;
+}
+
+.modal__input {
+    position: relative;
+
+    width: 100%;
+    height: 40px;
+    /* margin-bottom: 14px; */
+    margin-top: 4px;
+    padding-left: 42px;
+
+    outline: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border var(---transition-hover);
+    &:hover,
+    &:focus {
+        border: 1px solid var(--accent-color);
+    }
+}
+
+/* input-icon */
+
+.input__icon {
+    position: absolute;
+
+    top: 50%;
+    left: 15px;
+
+    fill: var(--third-icon-color);
+
+    transform: translateY(-50%);
+    transition: fill var(---transition-hover);
+    .modal__input:focus-within ~ & {
+        fill: var(--accent-color);
+    }
+}
+
+.textarea__text {
+    width: 100%;
+    height: 100px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    padding: 12px 16px;
+    margin-top: 4px;
+    &::placeholder {
+        font-family: "Roboto";
+        font-style: normal;
+        @include font(400, 14px, 1.14, 0.01em);
+
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+.privacy__text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: var(--second-color-text);
+    @include flex;
+    &::before {
+        content: "";
+        width: 16px;
+        height: 14px;
+
+        border: 2px solid var(--third-icon-color);
+        border-radius: 3px;
+
+        margin-right: 7px;
+        transition: border-color var(---transition-hover);
+        .privacy__checkbox:checked + & {
+            background-color: var(--accent-color);
+            border: 2px solid var(--accent-color);
+            background-image: url(../images/check.png);
+        }
+        .privacy__checkbox:focus + &,
+        .privacy__checkbox:hover + & {
+            border-color: var(--accent-color);
+        }
+    }
+}
+
+/* privacy__link */
+
+.privacy__link {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    margin-left: 4px;
+
+    color: var(--accent-color);
+    display: inline-block;
+    padding: 0px;
+    line-height: initial;
+    border-bottom: 1px solid var(--accent-color);
+}

@@ -1,0 +1,8 @@
+.footer {
+    background-color: #2f303a;
+    padding: 60px 0;
+    & .container {
+        display: flex;
+        align-items: baseline;
+    }
+}

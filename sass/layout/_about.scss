@@ -1,0 +1,36 @@
+.about {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &__title {
+        @include font(700, 36px, 1.16, 0.03em);
+        text-align: center;
+        color: var(--mine-color-text);
+        margin-bottom: 50px;
+    }
+    & .about__list {
+        display: flex;
+        align-items: center;
+    }
+    & .about__item + .about__item {
+        flex-basis: calc(100% / 3 - 30px);
+        margin-left: 30px;
+    }
+    &__top-wrap {
+        position: relative;
+    }
+    &__top-text {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 70px;
+        width: 100%;
+        @include font(700, 14px, 1.14, 0.03em);
+
+        text-align: center;
+        text-transform: uppercase;
+        background: rgba(47, 48, 58, 0.8);
+        color: var(--second-title-color);
+        padding: 27px 0px;
+    }
+}

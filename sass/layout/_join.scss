@@ -1,0 +1,12 @@
+.join {
+    margin-left: 70px;
+}
+
+.join__title,
+.subscribe__title {
+    font-family: "Roboto";
+    @include font(700, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+
+    color: var(--second-title-color);
+}
