@@ -4,6 +4,7 @@
     .container {
         display: flex;
         align-items: center;
+        // margin: 18px 0;
     }
     .nav__link {
         color: var(--mine-title-color);
@@ -16,27 +17,47 @@
 
 .nav__list {
     @include flex;
+    column-gap: 50px;
     .current {
         color: var(--accent-color);
     }
 }
 
 .contacts {
-    display: flex;
+    display: none;
+    flex-direction: column;
     margin-left: auto;
-    align-items: baseline;
+
+    @include tablet {
+        display: flex;
+        row-gap: 10px;
+    }
+    @media screen and (max-width: 1199px) {
+        align-items: baseline;
+        margin-top: 23px;
+        margin-bottom: 18px;
+    }
+    @include desktop {
+        column-gap: 30px;
+        flex-direction: row;
+    }
 }
 
-.nav__list li:not(:last-child),
-.contacts li:not(:last-child) {
-    margin-right: 50px;
-}
+// .nav__list li:not(:last-child),
+// .contacts li:not(:last-child) {
+//     margin-right: 50px;
+// }
 
 .nav {
+    display: none;
+
     @include font(500, 14px, 1.14, 0.02em);
 
     color: var(--mine-title-color);
     background-color: var(--mine-br-color);
+    @include tablet {
+        display: block;
+    }
 }
 
 .nav__link.current::after {
@@ -56,11 +77,14 @@
 
     @include font(500, 14px, 1.14, 0.02em);
     color: var(--second-color-text);
-    padding: 32px 0;
+
     transition: color var(---transition-hover);
     &:hover,
     &:focus {
         color: var(--accent-color);
+    }
+    @include desktop {
+        padding: 32px 0;
     }
 }
 
@@ -77,4 +101,15 @@
 .contacts__item:hover .contacts__icon,
 .contacts__item:focus .contacts__icon {
     fill: currentColor;
+}
+
+.menu__close-btn {
+    border: none;
+    background-color: transparent;
+    margin-left: auto;
+    @media screen and (min-width: 767px) {
+        display: none;
+    }
+
+    // position: absolute;
 }

@@ -163,13 +163,23 @@ body {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: 1.62;
   letter-spacing: 0.03em;
   color: var(--accent-color);
 }
+@media screen and (min-width: 1200px) {
+  .logo {
+    line-height: 1.19;
+  }
+}
 
 .logo--margin-right {
-  margin-right: 93px;
+  margin-right: 88px;
+}
+@media screen and (min-width: 768px) {
+  .logo--margin-right {
+    margin-right: 93px;
+  }
 }
 
 .logo--darck {
@@ -203,29 +213,50 @@ body {
 .nav__list {
   display: flex;
   align-items: center;
+  column-gap: 50px;
 }
 .nav__list .current {
   color: var(--accent-color);
 }
 
 .contacts {
-  display: flex;
+  display: none;
+  flex-direction: column;
   margin-left: auto;
-  align-items: baseline;
 }
-
-.nav__list li:not(:last-child),
-.contacts li:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: flex;
+    row-gap: 10px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .contacts {
+    align-items: baseline;
+    margin-top: 23px;
+    margin-bottom: 18px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    column-gap: 30px;
+    flex-direction: row;
+  }
 }
 
 .nav {
+  display: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--mine-title-color);
   background-color: var(--mine-br-color);
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    display: block;
+  }
 }
 
 .nav__link.current::after {
@@ -248,13 +279,18 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--second-color-text);
-  padding: 32px 0;
   transition: color var(---transition-hover);
 }
 .contacts__mail:hover, .contacts__mail:focus,
 .contacts__tel:hover,
 .contacts__tel:focus {
   color: var(--accent-color);
+}
+@media screen and (min-width: 1200px) {
+  .contacts__mail,
+.contacts__tel {
+    padding: 32px 0;
+  }
 }
 
 .nav__link:hover,
@@ -270,6 +306,17 @@ body {
 .contacts__item:hover .contacts__icon,
 .contacts__item:focus .contacts__icon {
   fill: currentColor;
+}
+
+.menu__close-btn {
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+}
+@media screen and (min-width: 767px) {
+  .menu__close-btn {
+    display: none;
+  }
 }
 
 .hero {
