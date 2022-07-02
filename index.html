@@ -76,17 +76,88 @@
                         >
                     </li>
                 </ul>
-                <button type="button" class="menu__close-btn">
-                    <svg class="icon__open-menu" width="40" height="40">
-                        <use href="./images/icons.svg#icon-close_menu"></use>
-                        <use href="./images/icons.svg#icon-menu_mobile"></use>
+
+                <button
+                    type="button"
+                    class="menu-toggle js-open-menu"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                >
+                    <svg
+                        class="icon__open-menu"
+                        width="40"
+                        height="40"
+                        aria-label="Переключатель мобильного  меню"
+                    >
+                        <use
+                            class="icon-menu"
+                            href="./images/icons.svg#icon-menu_mobile"
+                        ></use>
                     </svg>
                 </button>
-                <!-- <button type="button" class="menu__open-btn">
-                    <svg class="icon__close-menu" width="40" height="40">
-                        <use href="./images/icons.svg#icon-menu_mobile"></use>
-                    </svg>
-                </button> -->
+            </div>
+            <div class="container">
+                <div class="menu-container js-menu-container" id="mobile-menu">
+                    <button class="menu-toggle js-close-menu">
+                        <svg
+                            class="icon__open-menu"
+                            width="40"
+                            height="40"
+                            aria-label="Переключатель мобильного  меню"
+                        >
+                            <use
+                                class="icon-cross"
+                                href="./images/icons.svg#icon-close_menu"
+                            ></use>
+                        </svg>
+                    </button>
+                    <ul class="mobile__menu">
+                        <li class="menu__item list">
+                            <a
+                                href="./index.html"
+                                class="menu__link link current"
+                                >Студия
+                            </a>
+                        </li>
+                        <li class="menu__item list">
+                            <a href="./portfolio.html" class="menu__link link">
+                                Портфолио
+                            </a>
+                        </li>
+                        <li class="menu__item list">
+                            <a href="" class="menu__link link">Контакты</a>
+                        </li>
+                    </ul>
+                    <ul class="menu__contacts list">
+                        <li class="menu__item link">
+                            <a href="tel:+380961111111" class="menu__tel link"
+                                >+38 096 111 11 11</a
+                            >
+                        </li>
+                        <li class="menu__item link">
+                            <a
+                                href="mailto:info@devstudio.com"
+                                class="menu__mail link"
+                            >
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="menu__soc-item list">
+                            <a href="" class="menu__soc-link link">Instagram</a>
+                        </li>
+                        <li class="menu__soc-item list">
+                            <a href="" class="menu__soc-link link">Twitter</a>
+                        </li>
+                        <li class="menu__soc-item list">
+                            <a href="" class="menu__soc-link link">Facebook</a>
+                        </li>
+                        <li class="menu__soc-item list">
+                            <a href="" class="menu__soc-link link">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </header>
         <main>
@@ -952,6 +1023,13 @@
             </div>
         </div>
 
+        <script
+            defer
+            src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+            integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+            crossorigin="anonymous"
+        ></script>
+        <script defer src="js/mobile-menu.js"></script>
         <script src="./js/modal.js"></script>
     </body>
 </html>
