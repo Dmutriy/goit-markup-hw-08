@@ -104,9 +104,11 @@
 }
 
 .menu__close-btn {
-    border: none;
-    background-color: transparent;
-    margin-left: auto;
+    // border: none;
+    background-color: red;
+    margin: 0;
+    padding: 0;
+
     @media screen and (min-width: 767px) {
         display: none;
     }
