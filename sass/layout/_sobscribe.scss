@@ -1,10 +1,20 @@
 .subscribe {
-    margin-left: 70px;
+    margin: 0;
+    @include desktop {
+        margin-left: 70px;
+    }
 }
 
 .subscribe__wrap {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
     margin-top: var(--typical-margin);
+    @include desktop {
+        align-items: baseline;
+        flex-direction: row;
+    }
 }
 
 .subscribe__email-input {
@@ -15,15 +25,15 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     margin-right: 12px;
+    margin-bottom: 20px;
     padding: 16px;
 
     width: 358px;
     height: 50px;
 
-    font-size: 16px;
-    line-height: 1.25;
+    @include font(null, 16px, 1.25, 0.03em);
+
     @include flex;
-    letter-spacing: 0.03em;
 
     color: rgba(255, 255, 255, 0.6);
     &::placeholder {
@@ -35,6 +45,9 @@
         align-items: center;
 
         color: rgba(255, 255, 255, 0.6);
+    }
+    @include desktop {
+        margin-bottom: 0;
     }
 }
 

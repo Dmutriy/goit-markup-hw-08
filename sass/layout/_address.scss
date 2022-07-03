@@ -1,3 +1,15 @@
+.address__wrap,
+.address__list,
+.join,
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include desktop {
+        align-items: baseline;
+    }
+}
+
 .address__list .address__item + .address__item {
     margin-top: 9px;
 }

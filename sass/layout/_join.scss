@@ -1,12 +1,21 @@
 .join {
-    margin-left: 70px;
+    margin: 0;
+    @include desktop {
+        margin-left: 70px;
+    }
 }
 
 .join__title,
 .subscribe__title {
+    margin-top: 60px;
+
     font-family: "Roboto";
     @include font(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
+    // align-items: center;
 
     color: var(--second-title-color);
+    @include desktop {
+        margin-top: 0;
+    }
 }

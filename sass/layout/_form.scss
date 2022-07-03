@@ -1,9 +1,12 @@
 .modal__title {
-    @include font(700, 20px, 1.15, 0.03em);
+    @include font(700, 20px, 1.5, 0.03em);
     text-align: center;
 
     color: var(--mine-title-color);
     margin-bottom: 12px;
+    @include desktop {
+        @include font(null, null, 1.15, null);
+    }
 }
 
 .modal__field {
@@ -79,12 +82,13 @@
 }
 
 .privacy__text {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    @include font(400, 12px, 1.16, 0.03em);
 
     color: var(--second-color-text);
     @include flex;
+    @include desktop {
+        @include font(null, 14px, 1.71, null);
+    }
     &::before {
         content: "";
         width: 16px;
@@ -110,9 +114,8 @@
 /* privacy__link */
 
 .privacy__link {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    @include font(400, 12px, 1.16, 0.03em);
+
     margin-left: 4px;
 
     color: var(--accent-color);
@@ -120,4 +123,7 @@
     padding: 0px;
     line-height: initial;
     border-bottom: 1px solid var(--accent-color);
+    @include desktop {
+        @include font(null, 14px, 1.71, null);
+    }
 }
