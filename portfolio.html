@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="./css/main.min.css" />
     </head>
     <body class="portfolio-body">
-        <!-- <header class="header">
+        <header class="header">
             <div class="container">
                 <a class="logo link logo--margin-right" href="/"
                     >Web<span class="logo--darck">Studio</span>
@@ -77,8 +77,105 @@
                         >
                     </li>
                 </ul>
+
+                <button
+                    type="button"
+                    class="menu-toggle js-open-menu"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                >
+                    <svg
+                        class="icon__open-menu"
+                        width="40"
+                        height="40"
+                        aria-label="Переключатель мобильного  меню"
+                    >
+                        <use
+                            class="icon-menu"
+                            href="./images/icons.svg#icon-menu_mobile"
+                        ></use>
+                    </svg>
+                </button>
             </div>
-        </header> -->
+            <div class="container">
+                <div class="menu-container js-menu-container" id="mobile-menu">
+                    <button class="menu-toggle js-close-menu">
+                        <svg
+                            class="icon__close-menu"
+                            width="40"
+                            height="40"
+                            aria-label="Переключатель мобильного  меню"
+                        >
+                            <use
+                                class="icon-cross"
+                                href="./images/icons.svg#icon-close_menu"
+                            ></use>
+                        </svg>
+                    </button>
+                    <div class="menu__top-wrap">
+                        <ul class="mobile__menu">
+                            <li class="menu__item list">
+                                <a href="./index.html" class="menu__link link"
+                                    >Студия
+                                </a>
+                            </li>
+                            <li class="menu__item list">
+                                <a
+                                    href="./portfolio.html"
+                                    class="menu__link current link"
+                                >
+                                    Портфолио
+                                </a>
+                            </li>
+                            <li class="menu__item list">
+                                <a href="" class="menu__link link">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu__bottom-wrap">
+                        <ul class="menu__contacts list">
+                            <li class="menu__item link">
+                                <a
+                                    href="tel:+380961111111"
+                                    class="menu__tel link"
+                                    >+38 096 111 11 11</a
+                                >
+                            </li>
+                            <li class="menu__item link">
+                                <a
+                                    href="mailto:info@devstudio.com"
+                                    class="menu__mail link"
+                                >
+                                    info@devstudio.com
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__soc-list">
+                            <li class="menu__soc-item list">
+                                <a href="" class="menu__soc-link link"
+                                    >Instagram</a
+                                >
+                            </li>
+                            <li class="menu__soc-item list">
+                                <a href="" class="menu__soc-link link"
+                                    >Twitter</a
+                                >
+                            </li>
+                            <li class="menu__soc-item list">
+                                <a href="" class="menu__soc-link link"
+                                    >Facebook</a
+                                >
+                            </li>
+                            <li class="menu__soc-item list">
+                                <a href="" class="menu__soc-link link"
+                                    >LinkedIn</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
 
         <main>
             <section class="filter section">
@@ -123,12 +220,34 @@
                         <li class="portfolio__item">
                             <a href="" class="portfolio__link link">
                                 <div class="portfolio__top-wrap">
-                                    <img
-                                        src="./images/imgportfolio1.jpg"
-                                        alt="laptop"
-                                        width="370"
-                                        height="294"
-                                    />
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                ./images/portfolio1_desk_x1.jpg 1x,
+                                                ./images/portfolio1_desk_x2.jpg 2x
+                                            "
+                                            media="(min-width: 1200px)"
+                                        />
+                                        <source
+                                            srcset="
+                                                ./images/portfolio1_tab_x1.jpg 1x,
+                                                ./images/portfolio1_tab_x2.jpg 2x
+                                            "
+                                            media="(min-width: 768px)"
+                                        />
+                                        <source
+                                            srcset="
+                                                ./images/portfolio1_mob_x1.jpg 1x,
+                                                ./images/portfolio1_mob_x2.jpg 2x
+                                            "
+                                            media="(min-width: 320px)"
+                                        />
+                                        <img
+                                            src="./images/portfolio1_desk_x1.jpg"
+                                            alt="laptop"
+                                            width="370"
+                                        />
+                                    </picture>
                                     <p class="portfolio__hover-text link">
                                         Ресурс предлагает комплексные
                                         предложения с разным уровнем функционала
@@ -148,12 +267,35 @@
 
                         <li class="portfolio__item">
                             <a href="" class="portfolio__link link">
-                                <img
-                                    src="./images/imgportfolio2.jpg"
-                                    alt="basketball"
-                                    width="370"
-                                    height="294"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/portfolio2_desk_x1.jpg 1x,
+                                            ./images/portfolio2_desk_x2.jpg 2x
+                                        "
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/portfolio2_tab_x1.jpg 1x,
+                                            ./images/portfolio2_tab_x2.jpg 2x
+                                        "
+                                        media="(min-width: 768px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/portfolio2_mob_x1.jpg 1x,
+                                            ./images/portfolio2_mob_x2.jpg 2x
+                                        "
+                                        media="(min-width: 320px)"
+                                    />
+                                    <img
+                                        src="./images/portfolio2_desk_x2.jpg"
+                                        alt="basketball"
+                                        width="370"
+                                    />
+                                </picture>
+
                                 <div class="portfolio__title-text">
                                     <h2 class="portfolio__title">
                                         Постер New Orlean vs Golden Star
@@ -166,12 +308,35 @@
 
                         <li class="portfolio__item">
                             <a href="" class="portfolio__link link">
-                                <img
-                                    src="./images/imgportfolio3.jpg"
-                                    alt="restaurant logo"
-                                    width="370"
-                                    height="294"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/portfolio3_desk_x1.jpg 1x,
+                                            ./images/portfolio3_desk_x2.jpg 2x
+                                        "
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/portfolio3_tab_x1.jpg 1x,
+                                            ./images/portfolio3_tab_x2.jpg 2x
+                                        "
+                                        media="(min-width: 768px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/portfolio3_mob_x1.jpg 1x,
+                                            ./images/portfolio3_mob_x2.jpg 2x
+                                        "
+                                        media="(min-width: 320px)"
+                                    />
+                                    <img
+                                        src="./images/portfolio3_desk_x2.jpg"
+                                        alt="restaurant logo"
+                                        width="370"
+                                    />
+                                </picture>
+
                                 <div class="portfolio__title-text">
                                     <h2 class="portfolio__title">
                                         Ресторан Seafood
@@ -184,12 +349,35 @@
 
                         <li class="portfolio__item">
                             <a href="" class="portfolio__link link">
-                                <img
-                                    src="./images/imgportfolio4.jpg"
-                                    alt="headphone"
-                                    width="370"
-                                    height="294"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/portfolio4_desk_x1.jpg 1x,
+                                            ./images/portfolio4_desk_x2.jpg 2x
+                                        "
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/portfolio4_tab_x1.jpg 1x,
+                                            ./images/portfolio4_tab_x2.jpg 2x
+                                        "
+                                        media="(min-width: 768px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/portfolio4_mob_x1.jpg 1x,
+                                            ./images/portfolio4_mob_x2.jpg 2x
+                                        "
+                                        media="(min-width: 320px)"
+                                    />
+                                    <img
+                                        src="./images/portfolio4_desk_x2.jpg"
+                                        alt="headphone"
+                                        width="370"
+                                    />
+                                </picture>
+
                                 <div class="portfolio__title-text">
                                     <h2 class="portfolio__title">
                                         Проект Prime
@@ -202,12 +390,35 @@
 
                         <li class="portfolio__item">
                             <a href="" class="portfolio__link link">
-                                <img
-                                    src="./images/imgportfolio5.jpg"
-                                    alt="boxes"
-                                    width="370"
-                                    height="294"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/portfolio5_desk_x1.jpg 1x,
+                                            ./images/portfolio5_desk_x2.jpg 2x
+                                        "
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/portfolio5_tab_x1.jpg 1x,
+                                            ./images/portfolio5_tab_x2.jpg 2x
+                                        "
+                                        media="(min-width: 768px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/portfolio5_mob_x1.jpg 1x,
+                                            ./images/portfolio5_mob_x2.jpg 2x
+                                        "
+                                        media="(min-width: 320px)"
+                                    />
+                                    <img
+                                        src="./images/portfolio5_desk_x2.jpg"
+                                        alt="boxes"
+                                        width="370"
+                                    />
+                                </picture>
+
                                 <div class="portfolio__title-text">
                                     <h2 class="portfolio__title">
                                         Проект Boxes
@@ -220,12 +431,35 @@
 
                         <li class="portfolio__item">
                             <a href="" class="portfolio__link link">
-                                <img
-                                    src="./images/imgportfolio6.jpg"
-                                    alt="monitor"
-                                    width="370"
-                                    height="294"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/portfolio6_desk_x1.jpg 1x,
+                                            ./images/portfolio6_desk_x2.jpg 2x
+                                        "
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/portfolio6_tab_x1.jpg 1x,
+                                            ./images/portfolio6_tab_x2.jpg 2x
+                                        "
+                                        media="(min-width: 768px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/portfolio6_mob_x1.jpg 1x,
+                                            ./images/portfolio6_mob_x2.jpg 2x
+                                        "
+                                        media="(min-width: 320px)"
+                                    />
+                                    <img
+                                        src="./images/portfolio6_desk_x2.jpg"
+                                        alt="monitor"
+                                        width="370"
+                                    />
+                                </picture>
+
                                 <div class="portfolio__title-text">
                                     <h2 class="portfolio__title">
                                         Inspiration has no Borders
@@ -238,12 +472,35 @@
 
                         <li class="portfolio__item">
                             <a href="" class="portfolio__link link">
-                                <img
-                                    src="./images/imgportfolio7.jpg"
-                                    alt="journal"
-                                    width="370"
-                                    height="294"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/portfolio7_desk_x1.jpg 1x,
+                                            ./images/portfolio7_desk_x2.jpg 2x
+                                        "
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/portfolio7_tab_x1.jpg 1x,
+                                            ./images/portfolio7_tab_x2.jpg 2x
+                                        "
+                                        media="(min-width: 768px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/portfolio7_mob_x1.jpg 1x,
+                                            ./images/portfolio7_mob_x2.jpg 2x
+                                        "
+                                        media="(min-width: 320px)"
+                                    />
+                                    <img
+                                        src="./images/portfolio7_desk_x2.jpg"
+                                        alt="journal"
+                                        width="370"
+                                    />
+                                </picture>
+
                                 <div class="portfolio__title-text">
                                     <h2 class="portfolio__title">
                                         Издание Limited Edition
@@ -256,12 +513,35 @@
 
                         <li class="portfolio__item">
                             <a href="" class="portfolio__link link">
-                                <img
-                                    src="./images/imgportfolio8.jpg"
-                                    alt="label"
-                                    width="370"
-                                    height="294"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/portfolio8_desk_x1.jpg 1x,
+                                            ./images/portfolio8_desk_x2.jpg 2x
+                                        "
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/portfolio8_tab_x1.jpg 1x,
+                                            ./images/portfolio8_tab_x2.jpg 2x
+                                        "
+                                        media="(min-width: 768px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/portfolio8_mob_x1.jpg 1x,
+                                            ./images/portfolio8_mob_x2.jpg 2x
+                                        "
+                                        media="(min-width: 320px)"
+                                    />
+                                    <img
+                                        src="./images/portfolio8_desk_x2.jpg"
+                                        alt="label"
+                                        width="370"
+                                    />
+                                </picture>
+
                                 <div class="portfolio__title-text">
                                     <h2 class="portfolio__title">Проект LAB</h2>
                                     <p class="portfolio__text">Маркетинг</p>
@@ -272,12 +552,35 @@
 
                         <li class="portfolio__item">
                             <a href="" class="portfolio__link link">
-                                <img
-                                    src="./images/imgportfolio9.jpg"
-                                    alt="growing business"
-                                    width="370"
-                                    height="294"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/portfolio9_desk_x1.jpg 1x,
+                                            ./images/portfolio9_desk_x2.jpg 2x
+                                        "
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/portfolio9_tab_x1.jpg 1x,
+                                            ./images/portfolio9_tab_x2.jpg 2x
+                                        "
+                                        media="(min-width: 768px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/portfolio9_mob_x1.jpg 1x,
+                                            ./images/portfolio9_mob_x2.jpg 2x
+                                        "
+                                        media="(min-width: 320px)"
+                                    />
+                                    <img
+                                        src="./images/portfolio9_desk_x2.jpg"
+                                        alt="growing business"
+                                        width="370"
+                                    />
+                                </picture>
+
                                 <div class="portfolio__title-text">
                                     <h2 class="portfolio__title">
                                         Growing Business
@@ -292,7 +595,7 @@
             </section>
         </main>
 
-        <!-- <footer class="footer">
+        <footer class="footer">
             <div class="container">
                 <div class="address__wrap">
                     <a class="logo link logo--margine-bottom" href="WedStudio"
@@ -413,7 +716,15 @@
                     </form>
                 </div>
             </div>
-        </footer> -->
+        </footer>
+
+        <script
+            defer
+            src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+            integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+            crossorigin="anonymous"
+        ></script>
+        <script defer src="js/mobile-menu.js"></script>
         <script src="./js/menu.js"></script>
     </body>
 </html>

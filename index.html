@@ -100,7 +100,7 @@
                 <div class="menu-container js-menu-container" id="mobile-menu">
                     <button class="menu-toggle js-close-menu">
                         <svg
-                            class="icon__open-menu"
+                            class="icon__close-menu"
                             width="40"
                             height="40"
                             aria-label="Переключатель мобильного  меню"
@@ -111,52 +111,69 @@
                             ></use>
                         </svg>
                     </button>
-                    <ul class="mobile__menu">
-                        <li class="menu__item list">
-                            <a
-                                href="./index.html"
-                                class="menu__link link current"
-                                >Студия
-                            </a>
-                        </li>
-                        <li class="menu__item list">
-                            <a href="./portfolio.html" class="menu__link link">
-                                Портфолио
-                            </a>
-                        </li>
-                        <li class="menu__item list">
-                            <a href="" class="menu__link link">Контакты</a>
-                        </li>
-                    </ul>
-                    <ul class="menu__contacts list">
-                        <li class="menu__item link">
-                            <a href="tel:+380961111111" class="menu__tel link"
-                                >+38 096 111 11 11</a
-                            >
-                        </li>
-                        <li class="menu__item link">
-                            <a
-                                href="mailto:info@devstudio.com"
-                                class="menu__mail link"
-                            >
-                                info@devstudio.com
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="menu__soc-item list">
-                            <a href="" class="menu__soc-link link">Instagram</a>
-                        </li>
-                        <li class="menu__soc-item list">
-                            <a href="" class="menu__soc-link link">Twitter</a>
-                        </li>
-                        <li class="menu__soc-item list">
-                            <a href="" class="menu__soc-link link">Facebook</a>
-                        </li>
-                        <li class="menu__soc-item list">
-                            <a href="" class="menu__soc-link link">LinkedIn</a>
-                        </li>
-                    </ul>
+                    <div class="menu__top-wrap">
+                        <ul class="mobile__menu">
+                            <li class="menu__item list">
+                                <a
+                                    href="./index.html"
+                                    class="menu__link link current"
+                                    >Студия
+                                </a>
+                            </li>
+                            <li class="menu__item list">
+                                <a
+                                    href="./portfolio.html"
+                                    class="menu__link link"
+                                >
+                                    Портфолио
+                                </a>
+                            </li>
+                            <li class="menu__item list">
+                                <a href="" class="menu__link link">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu__bottom-wrap">
+                        <ul class="menu__contacts list">
+                            <li class="menu__item link">
+                                <a
+                                    href="tel:+380961111111"
+                                    class="menu__tel link"
+                                    >+38 096 111 11 11</a
+                                >
+                            </li>
+                            <li class="menu__item link">
+                                <a
+                                    href="mailto:info@devstudio.com"
+                                    class="menu__mail link"
+                                >
+                                    info@devstudio.com
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__soc-list">
+                            <li class="menu__soc-item list">
+                                <a href="" class="menu__soc-link link"
+                                    >Instagram</a
+                                >
+                            </li>
+                            <li class="menu__soc-item list">
+                                <a href="" class="menu__soc-link link"
+                                    >Twitter</a
+                                >
+                            </li>
+                            <li class="menu__soc-item list">
+                                <a href="" class="menu__soc-link link"
+                                    >Facebook</a
+                                >
+                            </li>
+                            <li class="menu__soc-item list">
+                                <a href="" class="menu__soc-link link"
+                                    >LinkedIn</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </header>
@@ -260,12 +277,20 @@
                     <ul class="about__list list">
                         <li class="about__item">
                             <div class="about__top-wrap">
-                                <img
-                                    src="./images/about-img-1.jpg"
-                                    alt="Десктопные приложени"
-                                    width="370"
-                                    height="294"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/about-img-1.jpg    1x,
+                                            ./images/about-img-1-x2.jpg 2x
+                                        "
+                                        media="(min-width: 320px)"
+                                    />
+                                    <img
+                                        src="./images/about-img-1.jpg"
+                                        alt="Десктопные приложени"
+                                        width="370"
+                                    />
+                                </picture>
                                 <p class="about__top-text">
                                     Десктопные приложения
                                 </p>
@@ -273,12 +298,20 @@
                         </li>
                         <li class="about__item">
                             <div class="about__top-wrap">
-                                <img
-                                    src="./images/about-img-2.jpg"
-                                    alt="Мобильные приложения"
-                                    width="370"
-                                    height="294"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/about-img-2.jpg    1x,
+                                            ./images/about-img-2-x2.jpg 2x
+                                        "
+                                        media="(min-width: 320px)"
+                                    />
+                                    <img
+                                        src="./images/about-img-2.jpg"
+                                        alt="Десктопные приложени"
+                                        width="370"
+                                    />
+                                </picture>
                                 <p class="about__top-text">
                                     Мобильные приложения
                                 </p>
@@ -286,12 +319,20 @@
                         </li>
                         <li class="about__item">
                             <div class="about__top-wrap">
-                                <img
-                                    src="./images/about-img-3.jpg"
-                                    alt="Дизайнерские решения"
-                                    width="370"
-                                    height="294"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/about-img-3.jpg    1x,
+                                            ./images/about-img-3-x2.jpg 2x
+                                        "
+                                        media="(min-width: 320px)"
+                                    />
+                                    <img
+                                        src="./images/about-img-3.jpg"
+                                        alt="Десктопные приложени"
+                                        width="370"
+                                    />
+                                </picture>
                                 <p class="about__top-text">
                                     Дизайнерские решения
                                 </p>
@@ -789,7 +830,7 @@
             </section>
         </main>
 
-        <!-- <footer class="footer">
+        <footer class="footer">
             <div class="container">
                 <div class="address__wrap">
                     <a class="logo link logo--margine-bottom" href="WedStudio"
@@ -910,7 +951,7 @@
                     </form>
                 </div>
             </div>
-        </footer> -->
+        </footer>
 
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
@@ -1004,6 +1045,7 @@
                             name="privacy"
                             value="true"
                         />
+                        <!-- <div class="wrap"> -->
                         <label for="privacy" class="privacy__text">
                             Соглашаюсь с рассылкой и принимаю
                             <a
@@ -1014,6 +1056,7 @@
                                 >Условия договора</a
                             >
                         </label>
+                        <!-- </div> -->
                     </div>
 
                     <button type="submit" class="button button--margin-top">
