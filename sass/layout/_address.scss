@@ -10,6 +10,13 @@
     }
 }
 
+.address__list {
+    margin-bottom: 60px;
+    @include desktop {
+        margin-bottom: 0;
+    }
+}
+
 .address__list .address__item + .address__item {
     margin-top: 9px;
 }

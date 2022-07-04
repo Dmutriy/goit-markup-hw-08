@@ -662,6 +662,15 @@ body {
   }
 }
 
+.address__list {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .address__list {
+    margin-bottom: 0;
+  }
+}
+
 .address__list .address__item + .address__item {
   margin-top: 9px;
 }
@@ -685,17 +694,17 @@ body {
 }
 
 .join {
-  margin: 0;
+  margin-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
   .join {
     margin-left: 70px;
+    margin-bottom: 0;
   }
 }
 
 .join__title,
 .subscribe__title {
-  margin-top: 60px;
   font-family: "Roboto";
   font-weight: 700;
   font-size: 14px;
@@ -711,12 +720,9 @@ body {
   }
 }
 
-.subscribe {
-  margin: 0;
-}
 @media screen and (min-width: 1200px) {
   .subscribe {
-    margin-left: 70px;
+    margin-left: auto;
   }
 }
 
@@ -774,12 +780,12 @@ body {
 
 .filter {
   padding-top: 60px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
   .filter {
     padding-top: 94px;
-    padding-bottom: 50px;
+    padding-bottom: 94px;
   }
 }
 .filter .filter__list {
@@ -787,11 +793,18 @@ body {
   flex-wrap: wrap;
   column-gap: 8px;
   row-gap: 15px;
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
   .filter .filter__list {
     align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter .filter__list {
+    margin-bottom: 50px;
   }
 }
 
@@ -816,15 +829,6 @@ body {
   border-radius: 4px;
 }
 
-.portfolio {
-  margin-bottom: 60px;
-}
-@media screen and (min-width: 1200px) {
-  .portfolio {
-    margin-bottom: 94px;
-  }
-}
-
 .portfolio__list {
   display: flex;
   flex-wrap: wrap;
@@ -836,6 +840,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .portfolio__item {
+    display: flex;
     width: calc((100% - 30px) / 2);
   }
 }
@@ -846,7 +851,8 @@ body {
 }
 
 .portfolio__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 .portfolio__link:hover, .portfolio__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -878,6 +884,7 @@ body {
 }
 
 .portfolio__title-text {
+  flex-grow: 1;
   padding: 20px 24px;
   border-left: 1px solid var(--border-solid-color);
   border-right: 1px solid var(--border-solid-color);

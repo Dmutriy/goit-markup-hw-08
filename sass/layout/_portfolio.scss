@@ -1,7 +1,9 @@
 .portfolio__list {
 }
 .portfolio__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    // display: block;
     &:hover,
     &:focus {
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
@@ -36,6 +38,7 @@
 }
 
 .portfolio__title-text {
+    flex-grow: 1;
     padding: 20px 24px;
     border-left: 1px solid var(--border-solid-color);
     border-right: 1px solid var(--border-solid-color);

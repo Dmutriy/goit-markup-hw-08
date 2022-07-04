@@ -1,7 +1,10 @@
 .subscribe {
-    margin: 0;
+    // margin-bottom: 60px;
+    // margin: 0;
     @include desktop {
-        margin-left: 70px;
+        margin-left: auto;
+        // margin-left: 70px;
+        // margin-top: 0px;
     }
 }
 

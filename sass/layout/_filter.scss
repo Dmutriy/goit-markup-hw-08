@@ -1,34 +1,27 @@
 .filter {
     padding-top: 60px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
     @include desktop {
         padding-top: 94px;
-        padding-bottom: 50px;
+        padding-bottom: 94px;
     }
     & .filter__list {
         display: flex;
         flex-wrap: wrap;
         column-gap: 8px;
         row-gap: 15px;
+        margin-bottom: 40px;
+
         @include tablet {
             align-items: center;
             justify-content: center;
+            margin-bottom: 30px;
         }
-        // align-items: center;
-        // justify-content: center;
+        @include desktop {
+            margin-bottom: 50px;
+        }
     }
 }
-
-.filter__item {
-    // padding-bottom: 40px;
-    // @include desktop {
-    //     padding-bottom: 50px;
-    // }
-}
-
-// .filter .filter__item:not(:last-child) {
-//     margin-right: 9px;
-// }
 
 .filter__btn {
     padding: 6px 22px;
@@ -54,34 +47,30 @@
 }
 
 .portfolio {
-    margin-bottom: 60px;
-    @include desktop {
-        margin-bottom: 94px;
-    }
+    // margin-bottom: 60px;
+    // @include desktop {
+    //     margin-bottom: 94px;
+    // }
 }
 
 .portfolio__list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    // margin-bottom: 60px;
+    // @include desktop {
+    //     margin-bottom: 94px;
+    // }
 }
 
 .portfolio__item {
     width: 100%;
     @include tablet {
+        display: flex;
+
         width: calc((100% - 30px) / 2);
     }
     @include desktop {
         width: calc((100% - 60px) / 3);
     }
-    // margin-right: 30px;
-    // margin-bottom: 30px;
-
-    // &:nth-child(3n) {
-    //     margin-right: 0;
-    // }
-
-    // &:nth-last-child(-n + 3) {
-    //     margin-bottom: 0px;
-    // }
 }
