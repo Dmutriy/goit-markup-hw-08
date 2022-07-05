@@ -30,6 +30,7 @@
     // margin-top: calc(-1 * var(--typical-secon-margine));
     & > .client__item {
         width: calc((100% - 30px) / 2);
+        height: 92px;
 
         @include tablet {
             width: calc((100% - 60px) / 3);
